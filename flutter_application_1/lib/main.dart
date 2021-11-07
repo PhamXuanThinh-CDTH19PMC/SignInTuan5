@@ -129,6 +129,7 @@ class _LoginPageState extends State<LoginPage> {
 
 
   void onSignInClicked() {
+
   setState(() {
       if(_emailController.text.contains("")&& _passController.text.contains("")){
      _emailInvalid=true;
