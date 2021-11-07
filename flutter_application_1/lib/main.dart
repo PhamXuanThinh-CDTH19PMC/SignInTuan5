@@ -127,6 +127,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+
   void onSignInClicked() {
     setState(() {
       if (_emailInvalid && _PassInvalid) {
@@ -134,5 +135,5 @@ class _LoginPageState extends State<LoginPage> {
             context, MaterialPageRoute(builder: (context) => HomePage()));
       }
     });
-  }
+
 }
