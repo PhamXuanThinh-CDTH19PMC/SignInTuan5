@@ -129,11 +129,21 @@ class _LoginPageState extends State<LoginPage> {
 
 
   void onSignInClicked() {
-    setState(() {
-      if (_emailInvalid && _PassInvalid) {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomePage()));
-      }
+
+  setState(() {
+      if(_emailController.text.contains("")&& _passController.text.contains("")){
+     _emailInvalid=true;
+   }else{
+     _emailInvalid=false;
+   }
+   if(_emailController.text.contains( _passController.text))
+    {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailPage()));
+    }
+    else{
+       Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+    }
+
     });
 
 }
